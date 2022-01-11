@@ -3,3 +3,20 @@
   padding: 0 !important;
   text-decoration: none !important;
 }
+.custom-btn {
+  background-color: coral !important;
+  border-color: coral !important;
+}
+.custom-btn:hover {
+  background-color: rgb(250, 83, 22) !important;
+}
+.custom-nav a {
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.custom-nav a:hover {
+  color: coral;
+}

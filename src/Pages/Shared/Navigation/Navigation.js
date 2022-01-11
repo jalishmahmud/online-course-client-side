@@ -9,7 +9,7 @@ const Navigation = () => {
   const { user, signOutUser } = useAuth();
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container className="custom-nav">
+      <Container className="custom-nav py-2">
         <Navbar.Brand as={Link} to="/">
           <img
             className="img-fluid"

@@ -4,7 +4,6 @@
   font-weight: 600;
   padding-left: 40px;
   margin-bottom: 25px;
-  text-align: center;
   margin-top: 50px;
 }
 .custom-form-bg {
@@ -50,4 +49,14 @@ textarea:focus {
   letter-spacing: 1px;
   background-color: rgb(255, 87, 87);
   color: #fff;
+}
+.text-light p {
+  color: #999;
+  font-size: 18px;
+}
+.text-light i {
+  color: coral;
+  font-size: 20px;
+  margin-left: 40px;
+  margin-right: 10px;
 }
