@@ -1,0 +1,53 @@
+.get-in-touch h2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  padding-left: 40px;
+  margin-bottom: 25px;
+  text-align: center;
+  margin-top: 50px;
+}
+.custom-form-bg {
+  background-color: coral;
+}
+.custom-form {
+  margin-left: -55px;
+}
+.custom-form input,
+textarea {
+  width: 75%;
+  height: 60px;
+  border: none;
+  background-color: #fff;
+  color: coral;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 8px auto;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.custom-form textarea {
+  height: 120px;
+  margin-top: 8px;
+}
+.custom-form input:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+}
+.custom-form input[type="submit"] {
+  background-color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 30%;
+  text-align: right;
+}
+.custom-form input[type="submit"]:hover {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: rgb(255, 87, 87);
+  color: #fff;
+}
