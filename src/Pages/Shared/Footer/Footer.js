@@ -9,7 +9,7 @@ const Footer = () => {
       <Container>
         <Row className="footer-content pt-3">
           <Col className="py-4" xs={12} md={3}>
-            <h4>About JM Courier</h4>
+            <h4>About Us</h4>
             <img className="mb-3 img-fluid" src={logo} alt="" />
             <p>
               Encounter the most bewitching wines around the world with a
@@ -19,7 +19,7 @@ const Footer = () => {
           </Col>
 
           <Col className="py-4" xs={12} md={3}>
-            <h4>Popular Services</h4>
+            <h4>Popular Courses</h4>
             <span>Data Science</span>
             <span>SSC Math</span>
             <span>HSC Higher Math</span>

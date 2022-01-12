@@ -1,0 +1,73 @@
+.single-courses {
+  background-color: #f8f9fa;
+}
+.course-sidebar {
+  background-color: #fff;
+}
+.course-sidebar h4 {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(68, 68, 68);
+}
+.course-sidebar ul li {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: rgb(107, 107, 107);
+}
+.course-price {
+  font-size: 25px;
+  color: coral;
+  font-weight: 500;
+}
+button.custom-enroll-btn {
+  background-color: #fe4943;
+  padding: 8px 20px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  float: right;
+}
+button.custom-enroll-btn:hover {
+  background-color: #ce211b;
+  color: #fff;
+}
+
+.course-content p {
+  font-size: 16px;
+}
+.course-content p i {
+  color: coral;
+  margin-right: 7px;
+}
+.course-content p span {
+  margin-right: 20px;
+}
+.instructor-info img {
+  max-width: 20%;
+}
+.instructor-name {
+  margin-left: 30px;
+}
+.instructor-name h4 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.instructor-name h6 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgb(107, 107, 107);
+}
