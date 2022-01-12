@@ -5,6 +5,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
+  updateProfile,
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -14,14 +15,27 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [authError, setAuthError] = useState("");
+  const [admin, setAdmin] = useState(false);
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
-
   // user registration
-  const registerNewUser = (email, password, location, navigate) => {
+  const registerNewUser = (email, password, name, location, navigate) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        // update username to state
+        const newUser = { email, displayName: name };
+        setUser(newUser);
+
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        })
+          .then(() => {})
+          .catch((error) => {});
+
+        // save user to db
+        saveUser(email, name, "POST");
+
         const destination = location?.state?.from || "/";
         navigate(destination);
         setAuthError("");
@@ -56,6 +70,9 @@ const useFirebase = () => {
         navigate(destination);
         setAuthError("");
         setUser(result.user);
+        // save user to db
+        const user = result.user;
+        saveUser(user.email, user.displayName, "PUT");
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -87,6 +104,26 @@ const useFirebase = () => {
     return unsubscribed;
   }, [auth]);
 
+  // save user
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch("https://afternoon-meadow-62966.herokuapp.com/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
+  // check if admin
+  useEffect(() => {
+    fetch(`https://afternoon-meadow-62966.herokuapp.com/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setAdmin(data.admin);
+      });
+  }, [user.email]);
+
   return {
     registerNewUser,
     signInUser,
@@ -95,6 +132,7 @@ const useFirebase = () => {
     authError,
     isLoading,
     user,
+    admin,
   };
 };
 

@@ -4,7 +4,7 @@ import aboutCourseImg from "../../../images/statistic.jpg";
 import "./AboutCourse.css";
 const AboutCourse = () => {
   return (
-    <div className="about-course py-5 text-light">
+    <div id="about" className="about-course py-5 text-light">
       <Container>
         <Row className="pt-5">
           <Col sm={12} md={4}>

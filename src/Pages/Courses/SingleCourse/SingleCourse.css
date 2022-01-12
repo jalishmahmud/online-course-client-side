@@ -21,7 +21,7 @@
   color: coral;
   font-weight: 500;
 }
-button.custom-enroll-btn {
+a.custom-enroll-btn {
   background-color: #fe4943;
   padding: 8px 20px;
   border: none;
@@ -38,7 +38,7 @@ button.custom-enroll-btn {
   margin-bottom: 20px;
   float: right;
 }
-button.custom-enroll-btn:hover {
+a.custom-enroll-btn:hover {
   background-color: #ce211b;
   color: #fff;
 }

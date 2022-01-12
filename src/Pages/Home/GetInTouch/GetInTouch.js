@@ -9,7 +9,7 @@ const GetInTouch = () => {
   const phoneIcon = <FontAwesomeIcon icon={faPhoneSquareAlt} />;
   const envelope = <FontAwesomeIcon icon={faEnvelope} />;
   return (
-    <div className="py-5 get-in-touch">
+    <div id="contact-us" className="py-5 get-in-touch">
       <Container className="container-fluid">
         <Row>
           <Col sm={12} md={6}>

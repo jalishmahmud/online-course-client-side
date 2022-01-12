@@ -48,7 +48,7 @@ button.custom-lg-btn {
   transition: all 0.3s ease;
   margin-bottom: 20px;
 }
-button.custom-lg-btn {
+a.custom-lg-link-btn {
   background-color: rgb(56, 56, 56);
   /* background-image: linear-gradient(red, #fe4943); */
   padding: 15px 50px;
@@ -86,7 +86,7 @@ button.custom-lg-btn .disabled {
   transition: all 0.3s ease;
   margin-bottom: 20px;
 }
-button.custom-lg-btn:hover {
+a.custom-lg-link-btn:hover {
   background-color: #ce211b;
   /* background-image: linear-gradient(rgb(218, 0, 0), #fe4943); */
   color: #fff;

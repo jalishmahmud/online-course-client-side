@@ -33,7 +33,7 @@ const Login = () => {
     signInWithGoogle(location, navigate);
   };
   return (
-    <div>
+    <div className="pb-5">
       <Container>
         <Row className="mt-5 ">
           <Col md={5} xs={12} className=" p-5 rounded ">

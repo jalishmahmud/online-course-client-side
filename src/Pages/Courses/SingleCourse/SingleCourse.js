@@ -1,11 +1,12 @@
 import React from "react";
-import { Col, Container, Row, Accordion } from "react-bootstrap";
+import { Col, Container, Row, Accordion, Button } from "react-bootstrap";
 import "./SingleCourse.css";
 import sscMathCourse from "../../../images/ssc-math-course.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import anwarInstructor from "../../../images/anwar-instructor.jpg";
+import { Link } from "react-router-dom";
 const SingleCourse = () => {
   const clock = <FontAwesomeIcon icon={faClock} />;
   const globe = <FontAwesomeIcon icon={faGlobe} />;
@@ -121,7 +122,9 @@ const SingleCourse = () => {
               <p className="my-4 border-bottom pb-4">
                 <span className="course-price">Price: $500.00</span>
                 <span>
-                  <button className="custom-enroll-btn">Enroll Now</button>
+                  <Link to="/courses/enroll" className="custom-enroll-btn">
+                    Enroll Now
+                  </Link>
                 </span>
               </p>
               <div>

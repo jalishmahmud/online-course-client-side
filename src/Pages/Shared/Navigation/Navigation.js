@@ -6,7 +6,8 @@ import useAuth from "../../../hooks/useAuth";
 import mathDataSciLogo from "../../../images/logo-math-data.png";
 import "./Navigation.css";
 const Navigation = () => {
-  const { user, signOutUser } = useAuth();
+  const { user, signOutUser, admin } = useAuth();
+  console.log(admin);
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container className="custom-nav py-2">
@@ -30,10 +31,10 @@ const Navigation = () => {
           <Nav.Link as={Link} to="/">
             Home
           </Nav.Link>
-          <Nav.Link as={Link} to="/">
+          <Nav.Link as={HashLink} to="/home/#about">
             About
           </Nav.Link>
-          <Nav.Link as={Link} to="/allCctv">
+          <Nav.Link as={HashLink} to="/home/#course">
             Course
           </Nav.Link>
           <Nav.Link as={HashLink} to="/home/#contact-us">

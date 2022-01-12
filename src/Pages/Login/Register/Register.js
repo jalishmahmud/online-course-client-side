@@ -29,6 +29,7 @@ const Register = () => {
     registerNewUser(
       registerInfo.email,
       registerInfo.password,
+      registerInfo.name,
       location,
       navigate
     );
@@ -38,12 +39,22 @@ const Register = () => {
     signInWithGoogle(location, navigate);
   };
   return (
-    <div>
+    <div className="pb-5">
       <Container>
         <Row className="mt-5">
           <Col md={5} xs={12} className=" p-5">
             <h2 className="mb-3">Register </h2>
             <Form onSubmit={handleRegister}>
+              <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Label>Full Name</Form.Label>
+                <Form.Control
+                  name="name"
+                  onBlur={getInputFieldValue}
+                  type="text"
+                  placeholder="Your Full Name"
+                />
+              </Form.Group>
+
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control

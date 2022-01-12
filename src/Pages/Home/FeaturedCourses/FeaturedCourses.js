@@ -12,7 +12,7 @@ const FeaturedCourses = () => {
   const clock = <FontAwesomeIcon icon={faClock} />;
   const globe = <FontAwesomeIcon icon={faGlobe} />;
   return (
-    <div className="featured-courses pt-5">
+    <div id="course" className="featured-courses pt-5">
       <Container>
         <Row className="pt-5">
           <Col className="" sm={12} md={4}>
@@ -40,7 +40,9 @@ const FeaturedCourses = () => {
                 <i>{globe}</i> Live online class
               </span>
             </p>
-            <button className="custom-lg-btn">Course Details</button>
+            <Link to="/courses/singleCourse" className="custom-lg-link-btn">
+              Course Details
+            </Link>
           </Col>
           <Col className="single-course mb-4" sm={12} md={4}>
             <img className="img-fluid rounded" src={sscMathCourse} alt="" />
