@@ -1,15 +1,15 @@
-import React from "react";
-import { Col, Container, Row, Accordion, Button } from "react-bootstrap";
-import "./SingleCourse.css";
-import sscMathCourse from "../../../images/ssc-math-course.jpg";
+import { faClock, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import anwarInstructor from "../../../images/anwar-instructor.jpg";
+import React from "react";
+import { Accordion, Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import anwarInstructor from "../../../images/anwar-instructor.jpg";
+import sscMathCourse from "../../../images/ssc-math-course.jpg";
+import "./SingleCourse.css";
 const SingleCourse = () => {
   const clock = <FontAwesomeIcon icon={faClock} />;
   const globe = <FontAwesomeIcon icon={faGlobe} />;
+  window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <div className="single-courses">
       <Container>
@@ -49,6 +49,41 @@ const SingleCourse = () => {
                 Engineering, Mechanical Engineering, Industrial and Production
                 Engineering, Civil and Environmental Engineering, Systems
                 Engineering, Electrical Engineering etc.
+              </p>
+            </div>
+            <div className="course-description py-4">
+              <h4 className="mb-3">Class Schedule</h4>
+              <p>
+                <Table striped bordered hover>
+                  <thead>
+                    <tr>
+                      <th>Tuesday</th>
+                      <th>Wednesday</th>
+                      <th>Thursday</th>
+                      <th>Friday</th>
+                      <th>Saturday</th>
+                      <th>Sunday</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>11 AM - 12 PM</td>
+                      <td>6 PM - 7 PM</td>
+                      <td>11 AM - 12 PM</td>
+                      <td>6 PM - 7 PM</td>
+                      <td>6 PM - 7 PM</td>
+                      <td>11 AM - 12 PM</td>
+                    </tr>
+                    <tr>
+                      <td>2 PM - 3 PM</td>
+                      <td></td>
+                      <td>2 PM - 3 PM</td>
+                      <td></td>
+                      <td></td>
+                      <td>11 AM - 12 PM</td>
+                    </tr>
+                  </tbody>
+                </Table>
               </p>
             </div>
             <div className="course-content py-4">

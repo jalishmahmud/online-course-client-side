@@ -1,13 +1,12 @@
+import { faClock, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import anwarInstructor from "../../../images/anwar-instructor.jpg";
-import "./FeaturedCourses.css";
-import statisticCourse from "../../../images/statistic-course.jpg";
 import sscMathCourse from "../../../images/ssc-math-course.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import statisticCourse from "../../../images/statistic-course.jpg";
+import "./FeaturedCourses.css";
 const FeaturedCourses = () => {
   const clock = <FontAwesomeIcon icon={faClock} />;
   const globe = <FontAwesomeIcon icon={faGlobe} />;
@@ -15,7 +14,11 @@ const FeaturedCourses = () => {
     <div id="course" className="featured-courses pt-5">
       <Container>
         <Row className="pt-5">
-          <Col className="" sm={12} md={4}>
+          <Col
+            className="d-flex justify-content-center flex-column align-items-center"
+            sm={12}
+            md={4}
+          >
             <h2>My Courses</h2>
             <div className="custom-line"></div>
             <img
@@ -23,11 +26,9 @@ const FeaturedCourses = () => {
               src={anwarInstructor}
               alt=""
             />
-            <div className="d-flex justify-content-center">
-              <Link to="/" className="custom-lg-btn">
-                Join Free Webinar
-              </Link>
-            </div>
+            <Link to="/" className="custom-lg-btn webinar">
+              Join Free Webinar
+            </Link>
           </Col>
           <Col className="single-course mb-4" sm={12} md={4}>
             <img className="img-fluid rounded" src={statisticCourse} alt="" />

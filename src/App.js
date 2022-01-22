@@ -13,13 +13,11 @@ import Login from "./Pages/Login/Login/Login";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Login/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
-import Navigation from "./Pages/Shared/Navigation/Navigation";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Navigation></Navigation>
         <Routes>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
