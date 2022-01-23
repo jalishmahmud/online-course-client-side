@@ -35,6 +35,9 @@
 .sidebar-menu {
   margin-top: 1rem;
 }
+.sidebar-menu ul {
+  padding-left: 0rem;
+}
 .sidebar-menu a.active {
   background-color: #fff;
   padding-top: 1rem;
@@ -100,6 +103,7 @@ header h2 {
 header label span {
   font-size: 1.7rem;
   padding-right: 1rem;
+  cursor: pointer;
 }
 .search-wrapper {
   border: 1px solid #ccc;

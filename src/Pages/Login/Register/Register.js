@@ -11,6 +11,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import loginImage from "../../../images/login-image.jpg";
+import Navigation from "../../Shared/Navigation/Navigation";
 const Register = () => {
   const [registerInfo, setRegisterInfo] = useState({});
   const { registerNewUser, signInWithGoogle, isLoading, authError } = useAuth();
@@ -39,72 +40,79 @@ const Register = () => {
     signInWithGoogle(location, navigate);
   };
   return (
-    <div className="pb-5">
-      <Container>
-        <Row className="mt-5">
-          <Col md={5} xs={12} className=" p-5">
-            <h2 className="mb-3">Register </h2>
-            <Form onSubmit={handleRegister}>
-              <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>Full Name</Form.Label>
-                <Form.Control
-                  name="name"
-                  onBlur={getInputFieldValue}
-                  type="text"
-                  placeholder="Your Full Name"
-                />
-              </Form.Group>
+    <>
+      <Navigation></Navigation>
+      <div className="pb-5">
+        <Container>
+          <Row className="mt-5">
+            <Col md={5} xs={12} className=" p-5">
+              <h2 className="mb-3">Register </h2>
+              <Form onSubmit={handleRegister}>
+                <Form.Group className="mb-3" controlId="formBasicName">
+                  <Form.Label>Full Name</Form.Label>
+                  <Form.Control
+                    name="name"
+                    onBlur={getInputFieldValue}
+                    type="text"
+                    placeholder="Your Full Name"
+                  />
+                </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  name="email"
-                  onBlur={getInputFieldValue}
-                  type="email"
-                  placeholder="Enter your email"
-                />
-              </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Email address</Form.Label>
+                  <Form.Control
+                    name="email"
+                    onBlur={getInputFieldValue}
+                    type="email"
+                    placeholder="Enter your email"
+                  />
+                </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  name="password"
-                  onBlur={getInputFieldValue}
-                  type="password"
-                  placeholder="Your password"
-                />
-              </Form.Group>
-              {authError && (
-                <Alert className="my-3" variant="danger">
-                  {authError}
-                </Alert>
-              )}
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    name="password"
+                    onBlur={getInputFieldValue}
+                    type="password"
+                    placeholder="Your password"
+                  />
+                </Form.Group>
+                {authError && (
+                  <Alert className="my-3" variant="danger">
+                    {authError}
+                  </Alert>
+                )}
 
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Remember" />
-              </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                  <Form.Check type="checkbox" label="Remember" />
+                </Form.Group>
 
-              <Button className="me-2" variant="primary" type="submit">
-                Register
+                <Button className="me-2" variant="primary" type="submit">
+                  Register
+                </Button>
+                {isLoading && <Spinner animation="border" variant="primary" />}
+                <span className="m-4">
+                  <Link to="/login">Already Register? Login Here</Link>
+                </span>
+              </Form>
+              <div className="my-3">OR</div>
+              <Button
+                onClick={handleGoogleSignIn}
+                variant="danger"
+                type="submit"
+              >
+                Login With Google
               </Button>
-              {isLoading && <Spinner animation="border" variant="primary" />}
-              <span className="m-4">
-                <Link to="/login">Already Register? Login Here</Link>
-              </span>
-            </Form>
-            <div className="my-3">OR</div>
-            <Button onClick={handleGoogleSignIn} variant="danger" type="submit">
-              Login With Google
-            </Button>
-          </Col>
-          <Col md={7} xs={12} className=" p-5 rounded shadow">
-            <div>
-              <img className="img-fluid" src={loginImage} alt="" />
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Col>
+            <Col md={7} xs={12} className=" p-5 rounded shadow">
+              <div>
+                <img className="img-fluid" src={loginImage} alt="" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
   );
 };
 
