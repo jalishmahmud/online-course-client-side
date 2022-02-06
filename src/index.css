@@ -8,7 +8,8 @@ code {
     monospace;
 }
 :root {
-  --main-color: #425f85;
+  /* --main-color: #425f85; */
+  --main-color: #282828;
   --color-dark: #1d2231;
   --text-grey: #8390a2;
   --pink-color: #ff4943;

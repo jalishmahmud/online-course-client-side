@@ -43,6 +43,9 @@ const Navigation = () => {
           <Nav.Link as={HashLink} to="/home/#course">
             Course
           </Nav.Link>
+          <Nav.Link as={Link} to="/resources">
+            Resources
+          </Nav.Link>
           <Nav.Link as={HashLink} to="/home/#contact-us">
             Contact
           </Nav.Link>

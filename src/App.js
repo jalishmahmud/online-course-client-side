@@ -12,6 +12,7 @@ import AdminRoute from "./Pages/Login/AdminRoute/AdminRoute";
 import Login from "./Pages/Login/Login/Login";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Login/Register/Register";
+import Resources from "./Pages/Resources/Resources";
 import Footer from "./Pages/Shared/Footer/Footer";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/home" element={<Home />}></Route>
+          <Route path="/resources" element={<Resources />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route
