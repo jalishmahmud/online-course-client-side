@@ -9,8 +9,14 @@ const Navigation = () => {
   const { user, signOutUser, admin } = useAuth();
   console.log(admin);
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container className="custom-nav py-2">
+    <Navbar
+      className="border-bottom"
+      collapseOnSelect
+      expand="lg"
+      bg="light"
+      variant="light"
+    >
+      <Container className="custom-nav py-3">
         <Navbar.Brand as={Link} to="/">
           <img
             className="img-fluid"
@@ -19,7 +25,7 @@ const Navigation = () => {
             alt=""
           />
         </Navbar.Brand>
-        <Navbar.Text>
+        <Navbar.Text className="welcome-user">
           {user?.displayName && (
             <span>
               <b>Welcome!</b> {user.displayName}
@@ -27,7 +33,7 @@ const Navigation = () => {
           )}
         </Navbar.Text>
         <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
+        <Navbar.Collapse className="justify-content-end menu-items">
           <Nav.Link as={Link} to="/">
             Home
           </Nav.Link>

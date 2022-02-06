@@ -20,3 +20,19 @@
 .custom-nav a:hover {
   color: coral;
 }
+
+@media only screen and (max-width: 768px) {
+  .welcome-user {
+    display: none;
+  }
+  .menu-items {
+    padding-top: 30px;
+  }
+  .menu-items a {
+    margin-top: 10px;
+  }
+  .custom-btn {
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+}

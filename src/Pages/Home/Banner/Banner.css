@@ -19,7 +19,7 @@
   line-height: 32px;
 }
 a.custom-lg-btn {
-  background-color: #fe4943;
+  background-color: var(--pink-color);
   /* background-image: linear-gradient(red, #fe4943); */
   padding: 15px 50px;
   border: none;

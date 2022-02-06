@@ -1,0 +1,19 @@
+.enrollment-form h6 {
+  font-size: 1rem;
+  color: #444;
+}
+.enrollment-form .input-field {
+  width: 100%;
+  border: none;
+  padding: 1rem 1rem;
+  color: var(--text-grey);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.enrollment-form .input-field:focus {
+  outline: none;
+  border: 1px solid var(--main-color);
+}

@@ -8,9 +8,10 @@ code {
     monospace;
 }
 :root {
-  --main-color: #191844;
+  --main-color: #425f85;
   --color-dark: #1d2231;
   --text-grey: #8390a2;
+  --pink-color: #ff4943;
   --montserrat: "Montserrat", sans-serif;
   --poppins: "Poppins", sans-serif;
 }

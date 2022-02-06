@@ -7,7 +7,8 @@
   margin-top: 50px;
 }
 .custom-form-bg {
-  background-color: coral;
+  background-color: var(--pink-color);
+  border-radius: 10px;
 }
 .custom-form {
   margin-left: -55px;
@@ -18,7 +19,7 @@ textarea {
   height: 60px;
   border: none;
   background-color: #fff;
-  color: coral;
+  color: var(--pink-color);
   border-radius: 5px;
   padding: 10px 15px;
   margin: 8px auto;
@@ -55,8 +56,31 @@ textarea:focus {
   font-size: 18px;
 }
 .text-light i {
-  color: coral;
+  color: var(--pink-color);
   font-size: 20px;
   margin-left: 40px;
   margin-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .custom-form {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .custom-form-bg {
+    width: 90% !important;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px !important;
+  }
+  .custom-form input,
+  textarea {
+    width: 90%;
+    margin: 0px auto !important;
+  }
+  .custom-form input[type="submit"] {
+    text-align: center;
+  }
 }
